@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Low Rush</Name>
+  <Acronym>LR</Acronym>
+  <Stats>
+    <Weight>1</Weight>
+    <Attack>45</Attack>
+    <Defense>5</Defense>
+    <Stamina>15</Stamina>
+    <Dash>35</Dash>
+    <Resistance>80</Resistance>
+  </Stats>
+</Bit>

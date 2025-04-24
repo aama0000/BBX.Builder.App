@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssistBlade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Slash</Name>
+  <Acronym>S</Acronym>
+  <Stats>
+    <Weight>4.7</Weight>
+    <Attack>10</Attack>
+    <Defense>20</Defense>
+    <Stamina>10</Stamina>
+    <Height>50</Height>
+  </Stats>
+</AssistBlade>
