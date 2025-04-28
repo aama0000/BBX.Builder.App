@@ -31,7 +31,6 @@
             ItemLst = new ComboBox();
             txtName = new TextBox();
             txtAcronym = new TextBox();
-            chkCX = new CheckBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -51,6 +50,10 @@
             numResistance = new NumericUpDown();
             numHeight = new NumericUpDown();
             label10 = new Label();
+            label11 = new Label();
+            chkCX = new RadioButton();
+            chkBX = new RadioButton();
+            chkUX = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)numWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numAttack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDefense).BeginInit();
@@ -84,21 +87,11 @@
             txtAcronym.Size = new Size(226, 23);
             txtAcronym.TabIndex = 2;
             // 
-            // chkCX
-            // 
-            chkCX.AutoSize = true;
-            chkCX.Location = new Point(12, 170);
-            chkCX.Name = "chkCX";
-            chkCX.Size = new Size(66, 19);
-            chkCX.TabIndex = 9;
-            chkCX.Text = "CX Line";
-            chkCX.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             label1.Location = new Point(12, 226);
             label1.Name = "label1";
-            label1.Size = new Size(100, 23);
+            label1.Size = new Size(70, 23);
             label1.TabIndex = 10;
             label1.Text = "Weight:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -107,7 +100,7 @@
             // 
             label2.Location = new Point(12, 265);
             label2.Name = "label2";
-            label2.Size = new Size(100, 23);
+            label2.Size = new Size(70, 23);
             label2.TabIndex = 11;
             label2.Text = "Attack:";
             label2.TextAlign = ContentAlignment.MiddleLeft;
@@ -116,7 +109,7 @@
             // 
             label3.Location = new Point(12, 294);
             label3.Name = "label3";
-            label3.Size = new Size(100, 23);
+            label3.Size = new Size(70, 23);
             label3.TabIndex = 12;
             label3.Text = "Defense:";
             label3.TextAlign = ContentAlignment.MiddleLeft;
@@ -125,7 +118,7 @@
             // 
             label4.Location = new Point(12, 323);
             label4.Name = "label4";
-            label4.Size = new Size(100, 23);
+            label4.Size = new Size(70, 23);
             label4.TabIndex = 13;
             label4.Text = "Stamina:";
             label4.TextAlign = ContentAlignment.MiddleLeft;
@@ -134,7 +127,7 @@
             // 
             label5.Location = new Point(12, 363);
             label5.Name = "label5";
-            label5.Size = new Size(100, 23);
+            label5.Size = new Size(70, 23);
             label5.TabIndex = 14;
             label5.Text = "Dash:";
             label5.TextAlign = ContentAlignment.MiddleLeft;
@@ -143,7 +136,7 @@
             // 
             label6.Location = new Point(12, 392);
             label6.Name = "label6";
-            label6.Size = new Size(100, 23);
+            label6.Size = new Size(70, 23);
             label6.TabIndex = 15;
             label6.Text = "Resistance:";
             label6.TextAlign = ContentAlignment.MiddleLeft;
@@ -199,75 +192,121 @@
             // 
             numWeight.DecimalPlaces = 2;
             numWeight.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            numWeight.Location = new Point(118, 226);
+            numWeight.Location = new Point(104, 226);
             numWeight.Name = "numWeight";
-            numWeight.Size = new Size(120, 23);
+            numWeight.Size = new Size(134, 23);
             numWeight.TabIndex = 21;
             // 
             // numAttack
             // 
-            numAttack.Location = new Point(118, 265);
+            numAttack.Location = new Point(104, 265);
             numAttack.Maximum = new decimal(new int[] { 200, 0, 0, 0 });
             numAttack.Name = "numAttack";
-            numAttack.Size = new Size(120, 23);
+            numAttack.Size = new Size(134, 23);
             numAttack.TabIndex = 22;
             // 
             // numDefense
             // 
-            numDefense.Location = new Point(118, 294);
+            numDefense.Location = new Point(104, 294);
             numDefense.Maximum = new decimal(new int[] { 200, 0, 0, 0 });
             numDefense.Name = "numDefense";
-            numDefense.Size = new Size(120, 23);
+            numDefense.Size = new Size(134, 23);
             numDefense.TabIndex = 23;
             // 
             // numStamina
             // 
-            numStamina.Location = new Point(118, 323);
+            numStamina.Location = new Point(104, 323);
             numStamina.Maximum = new decimal(new int[] { 200, 0, 0, 0 });
             numStamina.Name = "numStamina";
-            numStamina.Size = new Size(120, 23);
+            numStamina.Size = new Size(134, 23);
             numStamina.TabIndex = 24;
             // 
             // numDash
             // 
-            numDash.Location = new Point(118, 363);
+            numDash.Location = new Point(104, 363);
             numDash.Maximum = new decimal(new int[] { 200, 0, 0, 0 });
             numDash.Name = "numDash";
-            numDash.Size = new Size(120, 23);
+            numDash.Size = new Size(134, 23);
             numDash.TabIndex = 25;
             // 
             // numResistance
             // 
-            numResistance.Location = new Point(118, 394);
+            numResistance.Location = new Point(104, 394);
             numResistance.Maximum = new decimal(new int[] { 200, 0, 0, 0 });
             numResistance.Name = "numResistance";
-            numResistance.Size = new Size(120, 23);
+            numResistance.Size = new Size(134, 23);
             numResistance.TabIndex = 26;
             // 
             // numHeight
             // 
             numHeight.DecimalPlaces = 2;
             numHeight.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            numHeight.Location = new Point(118, 197);
+            numHeight.Location = new Point(104, 197);
             numHeight.Name = "numHeight";
-            numHeight.Size = new Size(120, 23);
+            numHeight.Size = new Size(134, 23);
             numHeight.TabIndex = 28;
             // 
             // label10
             // 
             label10.Location = new Point(12, 197);
             label10.Name = "label10";
-            label10.Size = new Size(100, 23);
+            label10.Size = new Size(70, 23);
             label10.TabIndex = 27;
             label10.Text = "Height:";
             label10.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            label11.Location = new Point(12, 170);
+            label11.Name = "label11";
+            label11.Size = new Size(70, 23);
+            label11.TabIndex = 31;
+            label11.Text = "Line:";
+            label11.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // chkCX
+            // 
+            chkCX.AutoSize = true;
+            chkCX.Location = new Point(104, 168);
+            chkCX.Name = "chkCX";
+            chkCX.Size = new Size(40, 19);
+            chkCX.TabIndex = 32;
+            chkCX.TabStop = true;
+            chkCX.Text = "CX";
+            chkCX.UseVisualStyleBackColor = true;
+            // 
+            // chkBX
+            // 
+            chkBX.AutoSize = true;
+            chkBX.Location = new Point(153, 168);
+            chkBX.Name = "chkBX";
+            chkBX.Size = new Size(39, 19);
+            chkBX.TabIndex = 33;
+            chkBX.TabStop = true;
+            chkBX.Text = "BX";
+            chkBX.UseVisualStyleBackColor = true;
+            // 
+            // chkUX
+            // 
+            chkUX.AutoSize = true;
+            chkUX.Location = new Point(198, 168);
+            chkUX.Name = "chkUX";
+            chkUX.Size = new Size(40, 19);
+            chkUX.TabIndex = 34;
+            chkUX.TabStop = true;
+            chkUX.Text = "UX";
+            chkUX.UseVisualStyleBackColor = true;
             // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(254, 494);
+            ClientSize = new Size(249, 486);
+            Controls.Add(chkUX);
+            Controls.Add(chkBX);
+            Controls.Add(chkCX);
+            Controls.Add(label11);
             Controls.Add(numHeight);
             Controls.Add(label10);
             Controls.Add(numResistance);
@@ -287,7 +326,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(chkCX);
             Controls.Add(txtAcronym);
             Controls.Add(txtName);
             Controls.Add(ItemLst);
@@ -311,7 +349,6 @@
         private ComboBox ItemLst;
         private TextBox txtName;
         private TextBox txtAcronym;
-        private CheckBox chkCX;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -333,5 +370,9 @@
         private NumericUpDown numResistance;
         private NumericUpDown numHeight;
         private Label label10;
+        private Label label11;
+        private RadioButton chkBX;
+        private RadioButton chkUX;
+        private RadioButton chkCX;
     }
 }

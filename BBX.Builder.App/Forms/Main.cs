@@ -16,8 +16,7 @@ namespace BBX.Builder.App
 
         private void btnDatabase_Click(object sender, EventArgs e)
         {
-            //new DatabaseForm().ShowDialog();
-            MessageBox.Show("Database functionality is not implemented yet.");
+            new DatabaseForm().ShowDialog();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
