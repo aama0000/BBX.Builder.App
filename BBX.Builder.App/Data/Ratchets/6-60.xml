@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Ratchet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>6-60</Name>
+  <Stats>
+    <Weight>6.1</Weight>
+    <Attack>14</Attack>
+    <Defense>8</Defense>
+    <Stamina>8</Stamina>
+    <Height>60</Height>
+  </Stats>
+</Ratchet>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Blade xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Dran Brave</Name>
+  <Stats>
+    <CX>true</CX>
+    <Weight>31.2</Weight>
+    <Attack>40</Attack>
+    <Defense>10</Defense>
+    <Stamina>10</Stamina>
+  </Stats>
+</Blade>

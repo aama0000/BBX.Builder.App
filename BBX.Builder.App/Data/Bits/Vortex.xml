@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bits xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Vortex</Name>
+  <Acronym>V</Acronym>
+  <Stats>
+    <Weight>2</Weight>
+    <Attack>45</Attack>
+    <Defense>10</Defense>
+    <Stamina>5</Stamina>
+    <Dash>40</Dash>
+    <Resistance>80</Resistance>
+  </Stats>
+</Bits>
