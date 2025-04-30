@@ -93,6 +93,7 @@
             txtAcronym = new TextBox();
             txtName = new TextBox();
             lstBits = new ListBox();
+            button1 = new Button();
             itemTabs.SuspendLayout();
             bladeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numBladeWeight).BeginInit();
@@ -756,11 +757,21 @@
             lstBits.TabIndex = 61;
             lstBits.SelectedIndexChanged += lstBits_SelectedIndexChanged;
             // 
+            // button1
+            // 
+            button1.Location = new Point(31, 421);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 60;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // DatabaseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(591, 434);
+            ClientSize = new Size(591, 503);
+            Controls.Add(button1);
             Controls.Add(itemTabs);
             Name = "DatabaseForm";
             Text = "DatabaseForm";
@@ -864,5 +875,6 @@
         private Label label31;
         private TextBox txtAcronym;
         private TextBox txtName;
+        private Button button1;
     }
 }

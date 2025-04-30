@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arvie.adrian.aman\\source\\repos\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj": {}
+    "C:\\repo\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arvie.adrian.aman\\source\\repos\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj": {
+    "C:\\repo\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arvie.adrian.aman\\source\\repos\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj",
+        "projectUniqueName": "C:\\repo\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj",
         "projectName": "BBX.Builder.App",
-        "projectPath": "C:\\Users\\arvie.adrian.aman\\source\\repos\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj",
+        "projectPath": "C:\\repo\\BBX.Builder.App\\BBX.Builder.App\\BBX.Builder.App.csproj",
         "packagesPath": "C:\\Users\\arvie.adrian.aman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arvie.adrian.aman\\source\\repos\\BBX.Builder.App\\BBX.Builder.App\\obj\\",
+        "outputPath": "C:\\repo\\BBX.Builder.App\\BBX.Builder.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

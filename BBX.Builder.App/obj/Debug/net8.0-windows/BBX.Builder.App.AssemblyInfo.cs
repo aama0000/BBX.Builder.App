@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BBX.Builder.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+883053ba6058cef82857fd03cb713c8ca08dc28e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8edcbc1412f69d5e321c405a611ac5416b874d9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BBX.Builder.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BBX.Builder.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
