@@ -154,8 +154,8 @@ namespace BBX.Builder.App.Forms
             numStamina.Value = 0;
             numDash.Value = 0;
             numResistance.Value = 0;
-            
-            MessageBox.Show( selectedItem + " saved successfully.");
+
+            MessageBox.Show(selectedItem + " saved successfully.");
 
         }
 
@@ -222,6 +222,8 @@ namespace BBX.Builder.App.Forms
                 Stats = new BladeStats
                 {
                     CX = chkCX.Checked,
+                    BX = chkBX.Checked,
+                    UX = chkUX.Checked,
                     Weight = (double)numWeight.Value,
                     Attack = (int)numAttack.Value,
                     Defense = (int)numDefense.Value,

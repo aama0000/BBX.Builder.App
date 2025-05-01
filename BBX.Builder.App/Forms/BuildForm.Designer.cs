@@ -43,7 +43,6 @@
             label9 = new Label();
             lstBlade = new ComboBox();
             lblCX = new Label();
-            label8 = new Label();
             label7 = new Label();
             lstAssist = new ComboBox();
             label10 = new Label();
@@ -54,6 +53,10 @@
             label13 = new Label();
             lblHeight = new Label();
             label14 = new Label();
+            lblBX = new Label();
+            lblUX = new Label();
+            label8 = new Label();
+            lblBuildName = new Label();
             SuspendLayout();
             // 
             // label6
@@ -193,20 +196,13 @@
             // 
             lblCX.BackColor = Color.Red;
             lblCX.BorderStyle = BorderStyle.FixedSingle;
-            lblCX.Location = new Point(138, 227);
+            lblCX.ForeColor = Color.White;
+            lblCX.Location = new Point(164, 227);
             lblCX.Name = "lblCX";
-            lblCX.Size = new Size(100, 23);
+            lblCX.Size = new Size(74, 23);
             lblCX.TabIndex = 30;
+            lblCX.Text = "CX";
             lblCX.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            label8.Location = new Point(103, 227);
-            label8.Name = "label8";
-            label8.Size = new Size(29, 23);
-            label8.TabIndex = 31;
-            label8.Text = "CX:";
-            label8.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
@@ -302,11 +298,58 @@
             label14.Text = "Height:";
             label14.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // lblBX
+            // 
+            lblBX.BackColor = Color.Red;
+            lblBX.BorderStyle = BorderStyle.FixedSingle;
+            lblBX.ForeColor = Color.White;
+            lblBX.Location = new Point(12, 227);
+            lblBX.Name = "lblBX";
+            lblBX.Size = new Size(74, 23);
+            lblBX.TabIndex = 42;
+            lblBX.Text = "BX";
+            lblBX.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblUX
+            // 
+            lblUX.BackColor = Color.Red;
+            lblUX.BorderStyle = BorderStyle.FixedSingle;
+            lblUX.ForeColor = Color.White;
+            lblUX.Location = new Point(88, 227);
+            lblUX.Name = "lblUX";
+            lblUX.Size = new Size(74, 23);
+            lblUX.TabIndex = 43;
+            lblUX.Text = "UX";
+            lblUX.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            label8.Location = new Point(12, 259);
+            label8.Name = "label8";
+            label8.Size = new Size(100, 23);
+            label8.TabIndex = 44;
+            label8.Text = "Build Name";
+            label8.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblBuildName
+            // 
+            lblBuildName.BorderStyle = BorderStyle.FixedSingle;
+            lblBuildName.Location = new Point(88, 259);
+            lblBuildName.Name = "lblBuildName";
+            lblBuildName.Size = new Size(386, 23);
+            lblBuildName.TabIndex = 45;
+            lblBuildName.Text = "0";
+            lblBuildName.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // BuildForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(490, 259);
+            ClientSize = new Size(490, 296);
+            Controls.Add(lblBuildName);
+            Controls.Add(label8);
+            Controls.Add(lblUX);
+            Controls.Add(lblBX);
             Controls.Add(lblHeight);
             Controls.Add(label14);
             Controls.Add(lblPower);
@@ -317,7 +360,6 @@
             Controls.Add(lstRatchet);
             Controls.Add(label7);
             Controls.Add(lstAssist);
-            Controls.Add(label8);
             Controls.Add(lblCX);
             Controls.Add(label9);
             Controls.Add(lstBlade);
@@ -356,7 +398,6 @@
         private Label label9;
         private ComboBox lstBlade;
         private Label lblCX;
-        private Label label8;
         private Label label7;
         private ComboBox lstAssist;
         private Label label10;
@@ -367,5 +408,9 @@
         private Label label13;
         private Label lblHeight;
         private Label label14;
+        private Label lblBX;
+        private Label lblUX;
+        private Label label8;
+        private Label lblBuildName;
     }
 }

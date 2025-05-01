@@ -3,6 +3,8 @@
   <Name>Impact Drake</Name>
   <Stats>
     <CX>false</CX>
+    <BX>false</BX>
+    <UX>true</UX>
     <Weight>39</Weight>
     <Attack>75</Attack>
     <Defense>25</Defense>

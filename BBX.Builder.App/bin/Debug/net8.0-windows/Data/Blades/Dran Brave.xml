@@ -3,6 +3,8 @@
   <Name>Dran Brave</Name>
   <Stats>
     <CX>true</CX>
+    <BX>false</BX>
+    <UX>false</UX>
     <Weight>31.2</Weight>
     <Attack>40</Attack>
     <Defense>10</Defense>

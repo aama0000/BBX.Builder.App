@@ -15,6 +15,8 @@ namespace BBX.Builder.App.Models
     public class BladeStats
     {
         public bool CX { get; set; }
+        public bool BX { get; set; }
+        public bool UX { get; set; }
         public double Weight { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }

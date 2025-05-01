@@ -63,7 +63,11 @@ namespace BBX.Builder.App.Forms
         {
             double totalWeight = 0;
             bool isCX = false;
+            bool isBX = false;
+            bool isUX = false;
             int totalAttack = 0, totalDefense = 0, totalStamina = 0, totalDash = 0, totalResistance = 0, totalPower = 0, totalHeight = 0;
+
+            string bladeName, ratchetName, bitName, assistName, buildName;
 
             if (lstBlade.SelectedItem is Blade b)
             {
@@ -72,6 +76,9 @@ namespace BBX.Builder.App.Forms
                 totalDefense += b.Stats.Defense;
                 totalStamina += b.Stats.Stamina;
                 isCX = b.Stats.CX;
+                isBX = b.Stats.BX;
+                isUX = b.Stats.UX;
+
                 lstAssist.Enabled = b.Stats.CX;
             }
 
@@ -94,14 +101,8 @@ namespace BBX.Builder.App.Forms
 
             }
 
-
-
-            totalPower = totalAttack + totalDefense + totalStamina + totalDash + totalResistance;
-
             if (isCX)
             {
-                lblCX.BackColor = Color.Green;
-
                 if (lstAssist.SelectedItem is AssistBlade a)
                 {
                     totalWeight += a.Stats.Weight;
@@ -111,10 +112,13 @@ namespace BBX.Builder.App.Forms
                     totalHeight += a.Stats.Height;
                 }
             }
-            else
-            {
-                lblCX.BackColor = Color.Red;
-            }
+
+            buildName = $"{(lstBlade.SelectedItem as Blade)?.Name ?? "None"} {(isCX ? (lstAssist.SelectedItem as AssistBlade)?.Acronym.ToUpper() : " ")}{(lstRatchet.SelectedItem as Ratchet)?.Name ?? " "}{(lstBit.SelectedItem as Bits)?.Acronym.ToUpper() ?? " "}";
+            totalPower = totalAttack + totalDefense + totalStamina + totalDash + totalResistance;
+
+            lblCX.BackColor = isCX ? Color.Green : Color.Red;
+            lblBX.BackColor = isBX ? Color.Green : Color.Red;
+            lblUX.BackColor = isUX ? Color.Green : Color.Red;
 
             lblHeight.Text = "+" + totalHeight.ToString() + "mm";
             lblWeight.Text = totalWeight.ToString("F2") + "g";
@@ -124,12 +128,13 @@ namespace BBX.Builder.App.Forms
             lblDash.Text = totalDash.ToString();
             lblResistance.Text = totalResistance.ToString();
             lblPower.Text = totalPower.ToString();
+            lblBuildName.Text = buildName;
 
 
         }
 
 
-        public List<Blade> LoadAllBlades(string folderPath)
+        public static List<Blade> LoadAllBlades(string folderPath)
         {
             List<Blade> blades = new List<Blade>();
             string[] files = Directory.GetFiles(folderPath, "*.xml");
@@ -147,6 +152,8 @@ namespace BBX.Builder.App.Forms
                         Stats = new BladeStats
                         {
                             CX = bool.Parse(root.Element("Stats")?.Element("CX")?.Value ?? "false"),
+                            BX = bool.Parse(root.Element("Stats")?.Element("BX")?.Value ?? "false"),
+                            UX = bool.Parse(root.Element("Stats")?.Element("UX")?.Value ?? "false"),
                             Weight = double.Parse(root.Element("Stats")?.Element("Weight")?.Value ?? "0"),
                             Attack = int.Parse(root.Element("Stats")?.Element("Attack")?.Value ?? "0"),
                             Defense = int.Parse(root.Element("Stats")?.Element("Defense")?.Value ?? "0"),
@@ -164,7 +171,7 @@ namespace BBX.Builder.App.Forms
             return blades;
         }
 
-        public List<AssistBlade> LoadAllAssistBlades(string folderPath)
+        public static List<AssistBlade> LoadAllAssistBlades(string folderPath)
         {
             List<AssistBlade> assistBlades = new List<AssistBlade>();
             string[] files = Directory.GetFiles(folderPath, "*.xml");
@@ -177,6 +184,7 @@ namespace BBX.Builder.App.Forms
                     AssistBlade assistBlade = new AssistBlade
                     {
                         Name = root.Element("Name")?.Value,
+                        Acronym = root.Element("Acronym")?.Value,
                         Stats = new AssistBladeStats
                         {
                             Weight = double.Parse(root.Element("Stats")?.Element("Weight")?.Value ?? "0"),
@@ -196,7 +204,7 @@ namespace BBX.Builder.App.Forms
             return assistBlades;
         }
 
-        public List<Ratchet> LoadAllRatchets(string folderPath)
+        public static List<Ratchet> LoadAllRatchets(string folderPath)
         {
             List<Ratchet> ratchets = new List<Ratchet>();
             string[] files = Directory.GetFiles(folderPath, "*.xml");
@@ -228,7 +236,7 @@ namespace BBX.Builder.App.Forms
             return ratchets;
         }
 
-        public List<Bits> LoadAllBits(string folderPath)
+        public static List<Bits> LoadAllBits(string folderPath)
         {
             List<Bits> bits = new List<Bits>();
             string[] files = Directory.GetFiles(folderPath, "*.xml");
@@ -241,6 +249,7 @@ namespace BBX.Builder.App.Forms
                     Bits bit = new Bits
                     {
                         Name = rootElement.Element("Name")?.Value,
+                        Acronym = rootElement.Element("Acronym")?.Value,
                         Stats = new BitStats
                         {
                             Weight = int.Parse(rootElement.Element("Stats")?.Element("Weight")?.Value ?? "0"),
